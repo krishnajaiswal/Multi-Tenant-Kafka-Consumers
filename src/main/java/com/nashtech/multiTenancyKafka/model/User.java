@@ -1,4 +1,4 @@
-package com.nashtech.multiTenancyKafka.payload;
+package com.nashtech.multiTenancyKafka.model;
 
 import lombok.Data;
 
@@ -19,5 +19,8 @@ public class User {
         this.baseSalary = baseSalary;
         this.bonus = bonus;
         this.taxDeduction = taxDeduction;
+    }
+
+    public User() {
     }
 }

@@ -2,7 +2,7 @@ package com.nashtech.multiTenancyKafka.controller;
 
 
 import com.nashtech.multiTenancyKafka.kafka.JsonKafkaProducer;
-import com.nashtech.multiTenancyKafka.payload.User;
+import com.nashtech.multiTenancyKafka.model.KafkaConsumerMessage;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ public class JsonMessageController {
     }
 
     @PostMapping("/publish")
-    public ResponseEntity<String> publish(@RequestBody User user, @RequestHeader("X-Tenant_Id") String tenantId){
+    public ResponseEntity<String> publish(@RequestBody KafkaConsumerMessage user, @RequestHeader("X-Tenant_Id") String tenantId){
         kafkaProducer.sendMessage(user, tenantId);
         return ResponseEntity.ok("Json message sent to kafka topic");
     }
