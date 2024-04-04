@@ -1,8 +1,5 @@
-package com.nashtech.multiTenancyKafka.payload;
+package com.nashtech.multiTenancyKafka.model;
 
-import lombok.Data;
-
-@Data
 public class JsonMessage {
 
     private int employeeId;
