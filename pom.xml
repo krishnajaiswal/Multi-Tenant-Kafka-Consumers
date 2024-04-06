@@ -11,8 +11,13 @@
 	<groupId>com.nashtech</groupId>
 	<artifactId>multiTenancyKafka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>multiTenancyKafka</name>
 	<description>Demo project for Spring Boot</description>
+	<modules>
+		<module>Kafka-Producer</module>
+		<module>Kafka-Consumer</module>
+	</modules>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
